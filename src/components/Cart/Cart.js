@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser} from '@fortawesome/free-solid-svg-icons';
 import Name from '../Name/Name';
 import './Cart.css';
 
 const Cart = (props) => {
     const {cart} = props;
-    const [names, setName] = useState([]);
+    const [developers, setDeveloper] = useState([]);
     useEffect( () => {
-        setName(cart);
+        setDeveloper(cart);
     },[cart]);
 
     let totalQuantity = 0;
@@ -19,13 +21,13 @@ const Cart = (props) => {
         totalQuantity = totalQuantity + developer.quantity;
     }
     return (
-        <div>
-            <h2>Developer Added : {totalQuantity}</h2>
+        <div className="cart">
+            <h2><FontAwesomeIcon icon={faUser}  /> Developer Added : {totalQuantity}</h2>
             <h2>Total Cost : $ {total}</h2>
             {
-                names.map(name => <Name
-                     key={name.key}
-                     name={name}></Name>)
+                developers.map(developer => <Name
+                     key={developer.key}
+                     developer={developer}></Name>)
             }
         </div>
     );

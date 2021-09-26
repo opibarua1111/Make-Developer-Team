@@ -2,6 +2,10 @@
     background-color: rgb(213, 231, 255);
     padding: 15px;
     border-radius: 10px;
+    transition: .6s;
+}
+.developer:hover {
+    background-color: rgb(175, 200, 233);
 }
 .image img {
     width: 100px;
@@ -25,4 +29,5 @@
     font-weight: 600;
     color: #fff;
     border-color: lightslategrey;
+    cursor: pointer;
 }

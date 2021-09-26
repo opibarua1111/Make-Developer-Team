@@ -2,10 +2,15 @@ import React from 'react';
 import './Name.css';
 
 const Name = (props) => {
-    const {name} = props.name;
+    const {name, img} = props.developer;//destructuring
     return (
-        <div>
-            <li>{name}</li>
+        <div className="member">
+            <div className="img">
+                <img src={img} alt="" />
+            </div>
+            <div className="name">
+                <p>{name}</p>
+            </div>
         </div>
     );
 };

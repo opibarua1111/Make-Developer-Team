@@ -8,11 +8,11 @@ const Team = () => {
     useEffect( () => {
         fetch('./developers.JSON')
           .then(res => res.json())
-          .then(data => setDevelopers(data));
+          .then(data => setDevelopers(data)); //set developers
     },[])
     const handleAddToCart = (developer) => {
-        const newCart = [...cart, developer];
-        setCart(newCart);
+        const newCart = [...cart, developer]; //set new developer in cart
+        setCart(newCart); //set cart
     }
     return (
         <div className="team-container">
@@ -20,15 +20,16 @@ const Team = () => {
                <div className="developers">
                 {
                     developers.map(developer => <Developer 
-                        key={developer.key}
-                        developer={developer}
-                        handleAddToCart={handleAddToCart}
+                        key={developer.key} //generate key
+                        developer={developer} //send props
+                        handleAddToCart={handleAddToCart} //send function
                         ></Developer>)
                 }
                </div>
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} // send props
+                ></Cart> 
             </div>
         </div>
     );

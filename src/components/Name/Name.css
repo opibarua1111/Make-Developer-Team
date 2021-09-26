@@ -1,0 +1,23 @@
+.member {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: lightyellow;
+    border-radius: 10px;
+}
+.member .img{
+    height: 60px;
+    width: 70px;
+}
+.member .img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.name {
+    color: black;
+    font-weight: 700;
+}
